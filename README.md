@@ -28,4 +28,5 @@ Feel Free to Contact Me
 =====================================
 
 [Saurabh Garg](https://www.facebook.com/SaurabhGarg09)
-E-Mail @ gargsaurabh1993@gmail.com
+
+Mail @ gargsaurabh1993@gmail.com
