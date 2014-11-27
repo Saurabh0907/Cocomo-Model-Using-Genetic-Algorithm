@@ -79,7 +79,7 @@ public static void main(String args[]) throws IOException
     
     for(int t=0;t<gen;t++)
     {
-            Iterator MainOutputIT = output1.listIterator();
+            Iterator MainOutputIT = outputMain.listIterator();
 
             Writer wr = new FileWriter("src/cocomoga/output2.txt");
             Writer wrf = new FileWriter("src/cocomoga/fitness.txt");
@@ -103,10 +103,7 @@ public static void main(String args[]) throws IOException
                 {
                     eff = na*(Math.pow((double) in.next(), nb));
                     tdev = nc*(Math.pow(eff, nd));
-                    if(type==1)
-                        tdev = tdev*60;
-                    else
-                        tdev = tdev*12;
+                    tdev = tdev*12;
                     int val1 = (int) ou.next();
                     double fitness = Math.abs((double)(val1-tdev)/val1);
                     total = total + fitness;
@@ -116,7 +113,7 @@ public static void main(String args[]) throws IOException
                 
                 output2.add((float)total);
                 prob_total +=(float)total;
-                total = (1-total);
+                //total = (1-total);
                 wr.write(Math.abs(total*inputList.size())+ "\n");
             }
             System.out.println(prob_total);
